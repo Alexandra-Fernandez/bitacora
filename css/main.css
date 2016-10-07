@@ -1,0 +1,11 @@
+body {
+    background-image: url(../ima/fondo-de-pantalla-geometricos-10-9-s-307x512.jpg);
+    background-repeat: repeat-x;
+}
+
+.bitacora {
+    text-align: center;
+    font-family: 'Changa One', cursive;
+    font-size: 60px;
+    color: black;
+}
