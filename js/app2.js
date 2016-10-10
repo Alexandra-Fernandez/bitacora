@@ -1,4 +1,3 @@
-
 function Opciones(textArea,botonPub,botonElim){
   
   this.textArea = textArea;
@@ -43,14 +42,12 @@ var posts = [];
 
 window.addEventListener("load", function(){
   
-  var textArea = document.createElement("textarea");
-  var boton = document.createElement("button");
-  
   var botonTexto = document.getElementById("botonTexto");
   botonTexto.addEventListener("click",function() {
-    var post = new Texto("Gian",new Date(),"Desc");
+    var post = document.createElement("textarea");
     posts.push(post);
     publicarPosts();
+    
   });
   
   var botonCita = document.getElementById("botonCita");
@@ -75,6 +72,7 @@ window.addEventListener("load", function(){
   });
 });
 function publicarPosts() {
+ 
   for(var i=0;i<posts.length;i++) {
     posts[i].publicar();
   }

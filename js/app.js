@@ -1,31 +1,66 @@
 window.addEventListener("load", function(){
-  var boton1 = document.getElementById("boton1");
-  boton1.addEventListener("click",Texto);
+  var botonDeTexto = document.getElementById("botonTexto");
+  botonDeTexto.addEventListener("click",Texto);
   
   function Texto (e){
     e.preventDefault();
-    var textArea1 = document.createElement("textarea");
-    document.body.appendChild(textArea1);
-    var boton1 = document.createElement("button");
-    var publicar1 = document.createTextNode("Publicar");
-    boton1.appendChild(publicar1);
-    document.body.appendChild(boton1);
-    var botonElim1 = document.createElement("button");
-    var eliminar1 = document.createTextNode("Eliminar");
-    botonElim1.appendChild(eliminar1);
-    document.body.appendChild(botonElim1);
     
-  }
-  var boton2 = document.getElementById("boton2");
-  boton2.addEventListener("click",Cita);
+    var textAreaTexto = document.createElement("textarea");
+    document.body.appendChild(textAreaTexto);
+    var botonTexto = document.createElement("button");
+    var publicarTexto = document.createTextNode("Publicar");
+    botonTexto.appendChild(publicarTexto);
+    document.body.appendChild(botonTexto);
+    
+    var botonElimTexto = document.createElement("button");
+    var eliminarTexto = document.createTextNode("Eliminar");
+    botonElimTexto.appendChild(eliminarTexto);
+    document.body.appendChild(botonElimTexto);
+    
+    botonElimTexto.addEventListener("click", function(){
+        this.parentElement.remove();
+    });
+    
+    textAreaTexto.classList.add("caja-texto");
+      
+  }  
+  
+  var botonDeCita = document.getElementById("botonCita");
+  botonDeCita.addEventListener("click",Cita);
   
   function Cita (e){
     e.preventDefault();
-    var textArea2 = document.createElement("textarea");
-    document.body.appendChild(textArea2);
-    var boton2 = document.createElement("button");
-    var publicar2 = document.createTextNode("Publicar");
-    boton2.appendChild(publicar2);
-    document.body.appendChild(boton2);
+    var textAreaCita = document.createElement("textarea");
+    document.body.appendChild(textAreaCita);
+    var botonCita = document.createElement("button");
+    var publicarCita = document.createTextNode("Publicar");
+    botonCita.appendChild(publicarCita);
+    document.body.appendChild(botonCita);
+  }
+  
+  var botonDeMeme = document.getElementById("botonMeme");
+  botonDeMeme.addEventListener("click", Meme);
+  
+  function Meme (e){
+    e.preventDefault();
+    var textAreaMeme = document.createElement("textarea");
+    document.body.appendChild(textAreaMeme);
+    var botonMeme = document.createElement("button");
+    var publicarMeme = document.createTextNode("Publicar");
+    botonMeme.appendChild(publicarMeme);
+    document.body.appendChild(botonMeme);
+  }
+  
+  var botonDePastillita = document.getElementById("botonPastillita");
+  botonDePastillita.addEventListener("click", Pastillita);
+  
+  function Pastillita (e){
+    e.preventDefault();
+    var textAreaPastillita = document.createElement("textarea");
+    document.body.appendChild(textAreaPastillita);
+    var botonPastillita = document.createElement("button");
+    var publicarPastillita = document.createTextNode("Publicar");
+    botonPastillita.appendChild(publicarPastillita);
+    document.body.appendChild(botonPastillita);
   }
 });
